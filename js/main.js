@@ -72,7 +72,7 @@ function adicionar(contato = null) {
 
   let index = listaContatos.indexOf(contato)
 
-
+  console.log(">>>> " +index)
   document.querySelector('button').addEventListener('click',function(){
     let contato = {
       nome: inputNome.value,
@@ -80,7 +80,7 @@ function adicionar(contato = null) {
       email: inputEmail.value
     }
 
-    if(index > 0) {
+    if(index >= 0) {
       listaContatos.splice(index, 1, contato)
     }else {
       listaContatos.push(contato)
