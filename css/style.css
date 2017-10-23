@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Header*/
+nav ul {
+  list-style-type: none;
+  background-color: #111;
+}
+
+nav li {
+  display: inline-block;
+  padding: 15px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-title {
+  font-family: cursive;
+  font-size: 18px;
+}
+
+/*Content*/
+#app {
+  width: 80%;
+  margin: 25px auto;
+}
+
+.page-home {
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/*Content table*/
+table {
+  width: 70%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+
+table tr, table td, th {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+/*Content Adicionar*/
+
+fieldset {
+  width: 50%;
+  margin: auto;
+  padding: 19px;
+}
+
+input[type=text] {
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+button {
+  padding: 16px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  color: blue;
+  background-color: transparent;
+}
+
+button:hover {
+  background: blue;
+  color: #fff;
+}
