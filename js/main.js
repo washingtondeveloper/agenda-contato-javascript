@@ -1,5 +1,6 @@
 'use strict'
 //Modelo de teste, compreender como os Frameworks e Libraries JavaScript Funciona
+let instance = '' // Usando para mascara telefone
 
 let app = document.querySelector('#app')
 let listaContatos = [
@@ -65,10 +66,41 @@ function adicionar(contato = null) {
       <button>Adicionar</button>
     </fieldset>
   `
+  
 
   let inputNome     = document.querySelector('input[placeholder=Nome]')
   let inputTelefone = document.querySelector('input[placeholder=Telefone]')
   let inputEmail    = document.querySelector('input[placeholder=E-mail]')
+
+  /**
+   * Mascara 000-0000-0000 telefone
+   */
+ 
+  inputTelefone.addEventListener('keyup', (event) => {
+    
+    if(event.target.value.length == 3){
+      event.target.value += '-'
+    }
+
+    if(event.target.value.length == 8){
+      event.target.value += '-'
+    }
+
+    if(event.target.value.length == 13){
+      instance = event.target.value
+      let regex = /^\d{3}-\d{4}-\d{4}$/
+      
+      if(regex.test(event.target.value)){
+        event.target.value = instance
+      }	
+    }
+
+    if(event.target.value.length > 13) {
+      event.target.value = instance
+    }
+
+  }, false)
+
 
   let index = listaContatos.indexOf(contato)
 
